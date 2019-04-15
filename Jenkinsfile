@@ -8,7 +8,7 @@ node {
     def registryCredential = ''
 	
 	stage('Git') {
-		git 'https://github.com/shake76/nodeapptest.git'
+		git 'https://github.com/shake76/nodeapptest'
 	}
 	stage('Build') {
 		sh 'npm install'
