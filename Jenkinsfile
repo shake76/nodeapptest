@@ -10,11 +10,6 @@ node {
 	stage('Git') {
 		git 'https://github.com/shake76/nodeapptest'
 	}
-	stage('Build') {
-		sh 'npm install'
-	}
-	stage('Test') {
-		sh 'npm test'
 	}
 	stage('Building image') {
         docker.withRegistry( 'https://' + registry, registryCredential ) {
