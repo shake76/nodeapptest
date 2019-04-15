@@ -10,7 +10,6 @@ node {
 	stage('Git') {
 		git 'https://github.com/shake76/nodeapptest'
 	}
-	}
 	stage('Building image') {
         docker.withRegistry( 'https://' + registry, registryCredential ) {
 		    def buildName = registry + ":$BUILD_NUMBER"
